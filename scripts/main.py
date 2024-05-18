@@ -6,7 +6,10 @@ from dotenv import load_dotenv
 import os
 import streamlit as st
 
-
+headers = {
+    "authorization": st.secrets["OPEN_API_KEY"],
+    "content-type": "application/json"
+}
 def main():
     load_dotenv()
 
