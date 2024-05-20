@@ -6,6 +6,22 @@ from dotenv import load_dotenv
 
 # Charger les secrets depuis Streamlit
 def main():
+     # Ajout des images et du texte explicatif en haut de la page
+    st.markdown('''
+    ![MSE Logo](https://moodle.msengineering.ch/pluginfile.php/1/core_admin/logo/0x150/1643104191/logo-mse.png)
+    ![HES Logo](https://www.hes-so.ch/typo3conf/ext/wng_site/Resources/Public/HES-SO/img/logo_hesso_master_tablet.svg)
+
+    Cette application a été créée dans le cadre d'un projet d'approfondissement pour traiter les séries temporelles en utilisant des modèles de langage (LLM). Afin de rendre le modèle plus flexible et interactif, capable de répondre à diverses questions, nous avons développé plusieurs outils, notamment :
+    - `load_time_series`
+    - `calculate_monthly_average_temperature`
+    - `kmeans_cluster_time_series`
+    - `cluster_temperatures_tslearn`
+    - `predict_future_temperatures`
+    
+    En outre, nous avons mis en place un agent CSV pour répondre aux questions qui ne nécessitent pas l'utilisation des outils. Notre modèle traite d'abord la question posée par l'utilisateur, puis décide soit d'utiliser les outils au sein d'une chaîne, soit d'utiliser directement l'agent CSV.
+    ''')
+
+    
     # Récupérer la clé API depuis les secrets de Streamlit
     openai_api_key = st.secrets["OPEN_API_KEY"]
 
