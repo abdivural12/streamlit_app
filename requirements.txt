@@ -5,3 +5,13 @@ langchain-openai
 python-dotenv
 langchain-community
 tabulate
+pandas
+matplotlib
+scikit-learn
+tslearn
+prophet
+openai
+langchain-core
+
+
+
