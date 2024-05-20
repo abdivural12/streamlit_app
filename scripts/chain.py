@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 # Charger les secrets depuis Streamlit
 def main():
     # Récupérer la clé API depuis les secrets de Streamlit
-    openai_api_key = st.secrets["OPENAI_API_KEY"]
+    openai_api_key = st.secrets["OPEN_API_KEY"]
 
     if not openai_api_key:
-        st.error("OPENAI_API_KEY is not set. Please set it in the Streamlit secrets.")
+        st.error("OPEN_API_KEY is not set. Please set it in the Streamlit secrets.")
     else:
         st.success("API Key loaded successfully.")
 
